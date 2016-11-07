@@ -86,20 +86,7 @@ sll = LinkedList()
 sll.insertMulti([8,7,8])
 sll.printList()
 # sll.removeDups()
-sll.printList()
-# sll.rebuildAround(7)
-sll.printList()
-print sll.isPalindrome()
-
-
-
-
-
-
-
-
-
-
-
-
-
+# sll.printList()
+# # sll.rebuildAround(7)
+# sll.printList()
+# print sll.isPalindrome()

@@ -11,6 +11,7 @@ def addNode(root, value):
 		while current.next:
 			current = current.next
 		current.next = Node(value)
+		return current.next
 
 def printList(root):
 	while root:
@@ -42,13 +43,22 @@ def linearReverse(root):
 			temp.next = head
 			head = temp
 		return head
+	return root
+
+def reverseRecursive(current, previous=None):
+	if not current:
+		return
+	reverseRecursive(current.next, current)
+	current.next = previous			
 
 root = Node(5)
 addNode(root, 6)
 addNode(root, 7)
 addNode(root, 8)
 addNode(root, 9)
-addNode(root, 10)
+last = addNode(root, 10)
+# printList(root)
+# fun = linearReverse(root)
 printList(root)
-fun = linearReverse(root)
-printList(fun)
+reverseRecursive(root)
+printList(last)
