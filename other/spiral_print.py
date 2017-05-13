@@ -18,7 +18,7 @@ def spiral(matrix):
     top_row =  " ".join([str(item) for item in matrix[0]])
     
     # reverse all remaining rows of the matrix
-    reversed_rows = [ reversed(row) for row in matrix[1:]]
+    reversed_rows = [ row[::-1] for row in matrix[1:]]
     
     # create tuples of new rows from columns in all rows
     rotated_columns = zip(*reversed_rows)

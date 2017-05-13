@@ -13,7 +13,7 @@ def reversa(x):
 	return "".join([ x[ -1 * (y + 1)] for y in range(len(x)) ])
 
 def reverse(x):
-	if len(x) == 0: return []
+	if not x: return []
 	return reverse(x[1:]) + [x[0]]
 
 def reversu(x):

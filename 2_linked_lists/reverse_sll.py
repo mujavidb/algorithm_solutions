@@ -29,9 +29,7 @@ def reverseLL(root):
 		addNode(new, array.pop())
 	return new
 
-#O(n) recursive possible
-#O(n) with two pointers possible
-
+#O(n) time O(1) space
 def linearReverse(root):
 	if root.next:
 		head = root
@@ -45,6 +43,7 @@ def linearReverse(root):
 		return head
 	return root
 
+#O(n) time O(n) space
 def reverseRecursive(current, previous=None):
 	if not current:
 		return

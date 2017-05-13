@@ -1,4 +1,5 @@
-# Given an integer x and an array y, create a function that returns true if x exists as a sum of any contiguous elements in y.
+# Given an integer x and an array y, create a 
+# function that returns true if x exists as a sum of any contiguous elements in y.
 
 # x, y
 # 5, [4,3,2,3,1,5,0,7,8,4,5,2,3,6,0]

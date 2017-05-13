@@ -1,6 +1,6 @@
 #Facebook 2016 hackathon question
 
-def NumberOfPairs( a,  k):
+def numberOfPairs( a,  k):
     hashmap = {}
     counter = 0
     repeats = []
@@ -13,6 +13,6 @@ def NumberOfPairs( a,  k):
             	repeats.append(x)
     print counter
 
-NumberOfPairs([1,3,46,1,3,9], 47)
-NumberOfPairs([6,6,3,9,3,5,1], 12)
-NumberOfPairs([1,4,5,6,2,4,5,7,8], 13)
+numberOfPairs([1,3,46,1,3,9], 47)
+numberOfPairs([6,6,3,9,3,5,1], 12)
+numberOfPairs([1,4,5,6,2,4,5,7,8], 13)

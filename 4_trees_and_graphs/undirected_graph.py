@@ -24,13 +24,11 @@ class Graph:
 	    for node in self.graph[start]:
 	        if node not in path:
 	            newpath = self.find_path(node, end, path)
-	            if newpath: 
+	            if newpath:
 	            	return newpath
 	    return None
 
-	
-
-a = { 
+a = {
 	"a" : ["c"],
 	"b" : ["c", "e"],
 	"c" : ["a", "b", "d", "e"],

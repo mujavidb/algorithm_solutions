@@ -2,8 +2,7 @@
 class Node:
     def __init__(self, value = 0):
         self.value = value
-        self.right = None
-        self.left = None
+        self.left = self.right = None
 
 def bst_add(root, value):
     if root is not None:
@@ -81,7 +80,7 @@ def io_print(root):
 
 def io_print_stack(node):
     stack = []
-    while stack or node != None:
+    while stack:
         if node != None:
             stack.append(node)
             node = node.left
@@ -105,10 +104,15 @@ def post_print(root):
     print str(root.value) + " ",
 
 def height(node):
-    if node is None:
-        return -1
-    else:
-        return max(height(node.left), height(node.right)) + 1
+    return -1 if node is None else max(height(node.left), height(node.right)) + 1
+
+def validate(root):
+    return isValidBST(root, -float("inf"), float("inf"));
+def isValidBST(root, minVal, maxVal):
+    return (root == null) or /
+            (root.data <= minVal or root.data >= maxVal) or /
+            isValidBST(root.left, minVal, root.data) and /
+            isValidBST(root.right, root.data, maxVal)
 
 #doesn't work but logic checks out
 def balanced(node):
@@ -125,6 +129,13 @@ def bstify(array, node):
 	bstify(array[:mid], bst.left)
 	bstify(array[mid:], bst.right)
 
+def getAllPaths(root):
+    if not root:
+        return [""]
+    all_paths = [ "->" + str(root.value) + path for path in getAllPaths(root.left)]
+    all_paths.extend([ "->" + str(root.value) + path for path in getAllPaths(root.right)])
+    return list(set(all_paths))
+
 a = Node(10)
 bst_add(a, 15)
 bst_add(a, 3)
@@ -135,14 +146,13 @@ bst_add(a, 4)
 
 # bfs_print(a)
 # bfs_print_levels(a)
-average_levels(a)
+# average_levels(a)
 # new = bstify([1,2,3,4,5,6,7,8,9,10], Node())
 # io_print(new)
 # print
 # print height(new)
-
-
-
+bfs_print_levels(a)
+print getAllPaths(a)
 
 
 
